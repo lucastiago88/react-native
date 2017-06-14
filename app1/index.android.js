@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, Button, AppRegistry, View} from'react-native';
+import {Text, Button, AppRegistry, View, StyleSheet} from'react-native';
 
 
 const gerarNumeroAleatorio = () => {
@@ -10,7 +10,7 @@ const gerarNumeroAleatorio = () => {
 
 const App = () =>{
   return (
-    <View>
+    <View style={styles.container}>
       <Text>Gerador Números Randômicos</Text>
      <Button
         onPress={gerarNumeroAleatorio}
@@ -19,6 +19,17 @@ const App = () =>{
     </View>
     );
 };
+
+const styles = StyleSheet.create({
+
+   container : {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+  }
+
+});
 
 
 AppRegistry.registerComponent('app1', ()=> App);
